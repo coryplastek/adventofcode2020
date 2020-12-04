@@ -30,16 +30,12 @@ foreach( $slope in $slopes ) {
         $mapX = $x % $lineLength
         $xChar = $line[$mapX]
 
-        $replaceChar = ''
         switch ($xChar) {
             '#' {
                 $trees += 1
-                $replaceChar = 'O'
             }
 
-            default {
-                $replaceChar = '_'
-            }
+            default {}
         }
         Write-Debug "$x,$y => $mapX = $xChar`: $altLine"
     }
